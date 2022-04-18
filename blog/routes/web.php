@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lesson-list', function () {
+    return view('lesson-list')->with('data', json_encode(['lessons' => ['Lesson A', 'Lesson B', 'Lesson C']]));
+});
